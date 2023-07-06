@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class = "container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to 'Desafío', root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'home', home_path, class: 'nav-link'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'projects', projects_path, class: 'nav-link' %>
+        </li>
+         <li class="nav-item">
+          <%= link_to 'contact', contact_path, class: 'nav-link' %>
+        </li>
+    </div>
+  </div>
+</nav>
+       <%= yield %>
+    </div>
+  </body>
+</html>
